@@ -1,0 +1,21 @@
+[Event "Rated rapid game"]
+[Site "https://lichess.org/ZucJuftD"]
+[Date "2024.03.30"]
+[White "Lieverdje"]
+[Black "CheeseIsNotChess"]
+[Result "0-1"]
+[UTCDate "2024.03.30"]
+[UTCTime "20:25:50"]
+[WhiteElo "1974"]
+[BlackElo "2155"]
+[WhiteRatingDiff "-8"]
+[BlackRatingDiff "+17"]
+[Variant "Standard"]
+[TimeControl "900+10"]
+[ECO "B12"]
+[Opening "Caro-Kann Defense: Advance Variation, Bayonet Attack"]
+[Termination "Normal"]
+
+1. e4 { [%eval 0.14] [%clk 0:15:00] } 1... c6 { [%eval 0.24] [%clk 0:15:00] } 2. d4 { [%eval 0.28] [%clk 0:15:07] } 2... d5 { [%eval 0.31] [%clk 0:15:07] } 3. e5 { [%eval 0.19] [%clk 0:15:14] } 3... Bf5 { [%eval 0.29] [%clk 0:15:13] } 4. g4 { [%eval -0.17] [%clk 0:15:19] } 4... Be4 { [%eval 0.0] [%clk 0:15:19] } 5. f3 { [%eval 0.0] [%clk 0:15:27] } 5... Bg6 { [%eval 0.0] [%clk 0:15:26] } 6. e6 { [%eval 0.0] [%clk 0:15:33] } 6... Qd6 { [%eval 0.14] [%clk 0:15:29] } 7. exf7+ { [%eval 0.26] [%clk 0:14:17] } 7... Bxf7 { [%eval 0.23] [%clk 0:15:22] } 8. Nc3 { [%eval 0.23] [%clk 0:14:23] } 8... Nd7 { [%eval 0.2] [%clk 0:14:58] } 9. f4 { [%eval 0.26] [%clk 0:14:23] } 9... g5 { [%eval 0.39] [%clk 0:13:08] } 10. Nh3 { [%eval 0.39] [%clk 0:14:19] } 10... gxf4 { [%eval 0.3] [%clk 0:12:07] } 11. Bxf4 { [%eval 0.64] [%clk 0:14:02] } 11... Qg6 { [%eval 1.77] [%clk 0:11:33] } 12. Bd3 { [%eval 0.86] [%clk 0:13:04] } 12... Qe6+ { [%eval 0.89] [%clk 0:11:24] } 13. Ne2 { [%eval -0.06] [%clk 0:12:30] } 13... Qxg4 { [%eval -0.03] [%clk 0:11:04] } 14. Nf2 { [%eval 0.0] [%clk 0:10:26] } 14... Qe6 { [%eval 0.02] [%clk 0:10:32] } 15. Qd2 { [%eval 0.09] [%clk 0:09:52] } 15... Ngf6 { [%eval 0.05] [%clk 0:09:43] } 16. O-O-O { [%eval 0.08] [%clk 0:09:51] } 16... Ne4 { [%eval 0.11] [%clk 0:09:50] } 17. Bxe4 { [%eval 0.06] [%clk 0:08:35] } 17... dxe4 { [%eval 0.08] [%clk 0:09:45] } 18. Nc3 { [%eval 0.07] [%clk 0:05:30] } 18... Nf6 { [%eval 0.03] [%clk 0:09:13] } 19. Be5 { [%eval -0.73] [%clk 0:05:06] } 19... Nd5 { [%eval 0.32] [%clk 0:06:54] } 20. Nxd5 { [%eval -0.86] [%clk 0:04:56] } 20... cxd5 { [%eval -0.81] [%clk 0:06:56] } 21. Qb4 { [%eval -1.32] [%clk 0:04:15] } 21... Bh6+ { [%eval -1.02] [%clk 0:06:15] } 22. Kb1 { [%eval -0.95] [%clk 0:04:24] } 22... O-O { [%eval 1.38] [%clk 0:06:08] } 23. Ng4 { [%eval 1.41] [%clk 0:03:13] } 23... Bg7 { [%eval 1.46] [%clk 0:05:40] } 24. Rhg1 { [%eval 1.35] [%clk 0:02:08] } 24... Bg6 { [%eval 1.39] [%clk 0:05:41] } 25. h4 { [%eval 0.5] [%clk 0:02:01] } 25... h5 { [%eval 0.43] [%clk 0:04:57] } 26. Bxg7 { [%eval 0.45] [%clk 0:02:08] } 26... Kxg7 { [%eval 2.28] [%clk 0:04:59] } 27. Ne5 { [%eval 2.32] [%clk 0:02:16] } 27... Rf6 { [%eval 2.36] [%clk 0:04:55] } 28. Rd2 { [%eval 1.35] [%clk 0:01:45] } 28... Raf8 { [%eval 1.21] [%clk 0:04:35] } 29. Rdd1 { [%eval 1.28] [%clk 0:01:08] } 29... e3 { [%eval 1.2] [%clk 0:03:47] } 30. Qe1 { [%eval 0.86] [%clk 0:00:22] } 30... Qf5 { [%eval 1.56] [%clk 0:03:01] } 31. Nxg6 { [%eval 1.5] [%clk 0:00:22] } 31... Rxg6 { [%eval 1.55] [%clk 0:03:00] } 32. Qxe3 { [%eval 1.76] [%clk 0:00:30] } 32... Rg4 { [%eval 2.42] [%clk 0:03:00] } 33. Qxe7+ { [%eval 2.68] [%clk 0:00:25] } 33... Rf7 { [%eval 2.51] [%clk 0:03:07] } 34. Qe5+ { [%eval 0.0] [%clk 0:00:20] } 34... Kg6 { [%eval 2.65] [%clk 0:03:00] } 35. Rxg4+ { [%eval 0.0] [%clk 0:00:25] } 35... hxg4 { [%eval 0.0] [%clk 0:03:05] } 36. Qxf5+ { [%eval -0.75] [%clk 0:00:15] } 36... Rxf5 { [%eval 0.0] [%clk 0:03:03] } 37. Rg1 { [%eval -3.55] [%clk 0:00:16] } 37... Kh5 { [%eval -3.65] [%clk 0:03:12] } 38. Rh1 { [%eval -5.1] [%clk 0:00:16] } 38... Rf4 { [%eval -4.65] [%clk 0:03:15] } 39. c3 { [%eval -4.58] [%clk 0:00:23] } 39... g3 { [%eval -4.44] [%clk 0:03:24] } 40. Kc2 { [%eval -4.38] [%clk 0:00:31] } 40... Rxh4 { [%eval -4.35] [%clk 0:03:16] } 41. Rg1 { [%eval -4.1] [%clk 0:00:26] } 41... Kg4 { [%eval -4.03] [%clk 0:03:22] } 42. Kd1 { [%eval -5.14] [%clk 0:00:33] } 42... Kf3 { [%eval -4.97] [%clk 0:03:29] } 43. Ke1 { [%eval -7.35] [%clk 0:00:42] } 43... Rh2 { [%eval -7.28] [%clk 0:03:35] } 44. Rf1+ { [%eval -8.54] [%clk 0:00:32] } 44... Ke3 { [%eval -7.8] [%clk 0:03:43] } 45. Rf5 { [%eval #-4] [%clk 0:00:15] } 45... Rh1+ { [%eval #-3] [%clk 0:03:48] } 46. Rf1 { [%eval #-3] [%clk 0:00:24] } 46... g2 { [%eval #-2] [%clk 0:03:55] } 47. Rxh1 { [%eval #-1] [%clk 0:00:16] } 47... gxh1=R# { [%clk 0:03:52] } 0-1
+
+
