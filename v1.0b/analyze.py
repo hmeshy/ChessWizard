@@ -27,7 +27,7 @@ class NeuralNetwork(nn.Module):
     
 model = torch.load('rapid2.pth') #change this to the path of the model used
 model.eval()
-pgn = open("C:/Users/hmesh/OneDrive/Documents/PGNs/lichessDataBase/testGame2.pgn") #change this to the path of the game used
+pgn = open("C:/Users/hmesh/OneDrive/Documents/GitHub/ChessWizard/GMGame.pgn") #change this to the path of the game used
 game = chess.pgn.read_game(pgn)
 moves = []
 evalArr = []
