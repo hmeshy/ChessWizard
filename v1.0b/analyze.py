@@ -27,7 +27,7 @@ class NeuralNetwork(nn.Module):
     
 model = torch.load('rapid2.pth') #change this to the path of the model used
 model.eval()
-pgn = open("C:/Users/hmesh/OneDrive/Documents/PGNs/lichessDataBase/testGame.pgn") #change this to the path of the game used
+pgn = open("C:/Users/hmesh/OneDrive/Documents/PGNs/lichessDataBase/testGame2.pgn") #change this to the path of the game used
 game = chess.pgn.read_game(pgn)
 moves = []
 evalArr = []
@@ -48,8 +48,8 @@ while game.next().next() is not None: #iterate through whole game, creating a li
         blackClock = game.clock()
     else:
         whiteClock = game.clock()
-    scaledWhiteClock = whiteClock / 900
-    scaledBlackClock = blackClock / 900 
+    scaledWhiteClock = whiteClock / 1800
+    scaledBlackClock = blackClock / 1800 
     scaledPly = min(1, (ply-1) / 200)
     povScore = game.eval()
     if povScore.is_mate():
