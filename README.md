@@ -12,3 +12,6 @@ Also, try different optimizers to try and create optimal models
 v1 results in training: Accuracy: 65.2%, Avg loss: 0.778032 v1 new model type Accuracy: 66.2%, Avg loss: 0.709914
 
 Also, simply based off one game, v1b delivers much more reasonable results (although perhaps not perfect results) for the data given
+
+v1.1a:
+Accuracy: 66.4%, Avg loss: 0.711654
