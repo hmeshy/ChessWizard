@@ -10,10 +10,10 @@ import chess.pgn
 import numpy as np
 import math
 print("opening")
-dataLength = 10000
+dataLength = 1000
 data = [[0,0,0,0,0,0,0]]
 labels = [["move0.csv", 0]] #sample data
-pgn = open("C:/Users/hmesh/OneDrive/Documents/PGNs/lichessDataBase/training.pgn")
+pgn = open("C:/Users/hmesh/OneDrive/Documents/PGNs/lichessDataBase/test.pgn")
 print("done")
 
 def evalScale(x):
@@ -72,5 +72,5 @@ for gameN in range(1,dataLength + 1):
         info = "game" + str(gameN) + "move" + str(ply) + ".csv"
         labels.append([info, result])
 for i in range(len(data)):
-    np.savetxt("C:/Users/hmesh/OneDrive/Documents/PGNs/lichessDataBase/data/trainingData/" + labels[i][0], data[i])
-np.savetxt("C:/Users/hmesh/OneDrive/Documents/PGNs/lichessDataBase/data/trainingLabels.csv", labels, delimiter = ", ", fmt = '% s')
+    np.savetxt("C:/Users/hmesh/OneDrive/Documents/PGNs/lichessDataBase/data/testData/" + labels[i][0], data[i])
+np.savetxt("C:/Users/hmesh/OneDrive/Documents/PGNs/lichessDataBase/data/testLabels.csv", labels, delimiter = ", ", fmt = '% s')

@@ -11,7 +11,7 @@ class NeuralNetwork(nn.Module):
         super().__init__()
         self.flatten = nn.Flatten()
         self.linear_relu_stack = nn.Sequential(
-            nn.Linear(6, 512),
+            nn.Linear(7, 512),
             nn.ReLU(),
             nn.Dropout(0.5),  # Adding dropout for regularization
             nn.Linear(512, 512),
@@ -41,15 +41,17 @@ ply = 0
 def evalScale(x):
     x = (2 / (math.e ** (-0.53 * x) + 1)) - 1
     return x
+scaledEval = evalScale(0.2)
 while game.next().next() is not None: #iterate through whole game, creating a list of attributes for each game
+    prevEval = scaledEval
     game = game.next()
     ply += 1
     if ply % 2 == 0: #odd so black to move
         blackClock = game.clock()
     else:
         whiteClock = game.clock()
-    scaledWhiteClock = whiteClock / 1800
-    scaledBlackClock = blackClock / 1800 
+    scaledWhiteClock = whiteClock / 900
+    scaledBlackClock = blackClock / 900 
     scaledPly = min(1, (ply-1) / 200)
     povScore = game.eval()
     if povScore.is_mate():
@@ -68,7 +70,7 @@ while game.next().next() is not None: #iterate through whole game, creating a li
         else:
             scaledEval = min(0.99, evalScale(score))
             evalArr.append(min(10,score))
-    moves.append([[scaledEval, scaledWhiteElo, scaledBlackElo, scaledWhiteClock, scaledBlackClock, scaledPly]])
+    moves.append([[prevEval, scaledEval, scaledWhiteElo, scaledBlackElo, scaledWhiteClock, scaledBlackClock, scaledPly]])
 probab_arr = []
 for move in moves: #iterate moves into the neural network, producing the win probabilities of each side.
     with torch.no_grad():
