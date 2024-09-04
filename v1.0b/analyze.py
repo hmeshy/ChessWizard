@@ -27,9 +27,10 @@ class NeuralNetwork(nn.Module):
     
 model = torch.load('rapid2.pth') #change this to the path of the model used
 model.eval()
-pgn = open("C:/Users/hmesh/OneDrive/Documents/PGNs/lichessDataBase/testGame2.pgn") #change this to the path of the game used
+pgn = open("C:/Users/hmesh/OneDrive/Documents/PGNs/lichessDataBase/testGame.pgn") #change this to the path of the game used
 game = chess.pgn.read_game(pgn)
 moves = []
+evalArr = []
 whiteElo = int(game.headers["WhiteElo"])
 blackElo = int(game.headers["BlackElo"])
 scaledWhiteElo = (whiteElo - 600) / 2900
@@ -55,14 +56,18 @@ while game.next().next() is not None: #iterate through whole game, creating a li
         score = povScore.white().mate()
         if score < 0:
             scaledEval = min(-0.99, -((score+1)/1000 + 1))
+            evalArr.append(-10)
         else:
             scaledEval = max(0.99, 1 - ((score-1)/1000))
+            evalArr.append(10)
     else:
         score = povScore.white().score()/100
         if score < 0:
             scaledEval = max(-0.99, evalScale(score))
+            evalArr.append(max(-10,score))
         else:
-            scaledEval = min(0.99, evalScale(score)) 
+            scaledEval = min(0.99, evalScale(score))
+            evalArr.append(min(10,score))
     moves.append([[scaledEval, scaledWhiteElo, scaledBlackElo, scaledWhiteClock, scaledBlackClock, scaledPly]])
 probab_arr = []
 for move in moves: #iterate moves into the neural network, producing the win probabilities of each side.
@@ -84,23 +89,37 @@ f2 = []
 for n in range(0, len(f1)):
     f2.append(f1[n]+draw_arr[n])
 # Create the plot
-plt.figure(figsize=(8, 6))
+fig, ax1 = plt.subplots(figsize=(8, 6))
 
 # Plot the lines
-plt.plot(x, f1, label='White/Draw', color='red')
-plt.plot(x, f2, label='Draw/Black', color='blue')
+ax1.plot(x, f1, label='White/Draw', color='red')
+ax1.plot(x, f2, label='Draw/Black', color='blue')
 
 # Fill the regions
-plt.fill_between(x, 0, f1, color='white', alpha=0.5, label='White%')
-plt.fill_between(x, f1, f2, color='grey', alpha=0.5, label='Draw%')
-plt.fill_between(x, f2, 1, color='black', alpha=0.5, label='Black%')
+ax1.fill_between(x, 0, f1, color='white', alpha=0.5, label='White%')
+ax1.fill_between(x, f1, f2, color='grey', alpha=0.5, label='Draw%')
+ax1.fill_between(x, f2, 1, color='black', alpha=0.5, label='Black%')
 
 # Adding labels and title
-plt.xlabel('Ply (HalfMoves)')
-plt.ylabel('WinProb (%)')
-plt.title('WinProbGraph')
-plt.legend()
+ax1.set_xlabel('Ply (HalfMoves)')
+ax1.set_ylabel('WinProb (%)')
+ax1.set_title('WinProbGraph')
+ax1.legend(loc='upper left')
+ax1.grid(True)
+
+
+# Create a secondary y-axis
+ax2 = ax1.twinx()
+
+# Plot the secondary graph on the secondary y-axis
+ax2.plot(x, evalArr, label='SF Evaluation', color='black', linestyle='--')
+
+# Set the secondary y-axis limits and labels
+ax2.set_ylim(-10, 10)
+ax2.set_ylabel('Eval')
+
+# Adding the secondary y-axis legend
+ax2.legend(loc='lower left')
 
 # Show the plot
-plt.grid(True)
 plt.show()
