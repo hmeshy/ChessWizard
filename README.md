@@ -15,3 +15,5 @@ Also, simply based off one game, v1b delivers much more reasonable results (alth
 
 v1.1a:
 Accuracy: 66.4%, Avg loss: 0.711654 - based on graphs, very similar to v1.0 but smoother move-move changes
+v1.1b:
+Accuracy: 66.1%, Avg loss: 0.709059
